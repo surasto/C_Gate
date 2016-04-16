@@ -24,11 +24,11 @@ wertG=0;
 wertB=0;
 }
 
+// Schaltet alle drei LEDs an
 void dauerWeiss() {
 wertR=255;
 wertG=255;
 wertB=255;
-
 }
 
 
