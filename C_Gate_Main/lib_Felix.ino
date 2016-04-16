@@ -24,3 +24,7 @@ wertG=0;
 wertB=0;
 }
 
+void dauerWeiss() {
+}
+}
+
