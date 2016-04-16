@@ -25,6 +25,10 @@ wertB=0;
 }
 
 void dauerWeiss() {
+wertR=255;
+wertG=255;
+wertB=255;
+
 }
-}
+
 
