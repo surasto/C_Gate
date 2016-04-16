@@ -1,3 +1,4 @@
 #!/bin/bash
-git commit
+git add *
+git commit -m "neue version"
 git push origin master
