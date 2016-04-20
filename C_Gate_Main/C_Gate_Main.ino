@@ -9,13 +9,15 @@
 // Globale Variablen 
 int mode = 0;              // Animationsmodus
 int wertR, wertG, wertB;   // Helligkeit des drei LEDs
-
+long cm;
 
 void setup() {
   pinMode(10,OUTPUT);
   pinMode(11,OUTPUT);
   pinMode(13,OUTPUT);
   wertR =0; wertG=0; wertB=0;   // Alle LEDs aus  
+
+  Serial.begin(9600);  // Für Debugging
 }
 
 void loop() {
@@ -33,5 +35,5 @@ void loop() {
   digitalWrite(11,wertB);
   digitalWrite(10,wertG);
 
-  delay(50);  
+  cm = Abstand();  
 }
