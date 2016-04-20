@@ -35,5 +35,7 @@ void loop() {
   digitalWrite(11,wertB);
   digitalWrite(10,wertG);
 
-  cm = Abstand();  
+  cm = Abstand();
+
+  // Serial.println(cm);  
 }
