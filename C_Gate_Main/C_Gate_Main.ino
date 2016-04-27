@@ -30,9 +30,9 @@ void loop() {
             break;
     case 3: Terror();
             break;
-    case 4: Lauflicht();
+    case 4: Lauflicht(500);
             break;
-    case 5: Zufall(1000);
+    case 5: Zufall();
             break;
   }
 

@@ -19,8 +19,8 @@ void Terror() {
      } 
 }
 
-void Lauflicht() {
-     if(millis() > old_millis_D +50){
+void Lauflicht(int Zeit) {
+     if(millis() > old_millis_D +Zeit){
       
        if(wertR > 100) {
         wertR = 0; 
