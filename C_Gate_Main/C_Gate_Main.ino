@@ -32,7 +32,7 @@ void loop() {
             break;
     case 4: Lauflicht();
             break;
-    case 5: Zufall();
+    case 5: Zufall(1000);
             break;
   }
 

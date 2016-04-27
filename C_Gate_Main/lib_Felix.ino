@@ -32,8 +32,8 @@ void dauerWeiss() {
   wertB=255;
 }
 
-void Zufall (){;
-  if(millis() > old_millis_F +1000) {
+void Zufall (int Zeit){;
+  if(millis() > old_millis_F +Zeit) {
     wertR=random(0,2)*100;
     wertG=random(0,2)*100;
     wertB=random(0,2)*100;
