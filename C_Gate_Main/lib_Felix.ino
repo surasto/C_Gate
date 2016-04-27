@@ -38,5 +38,6 @@ void Zufall (){;
     wertG=random(0,2)*100;
     wertB=random(0,2)*100;
     old_millis_F=millis();
+
   }
 }
