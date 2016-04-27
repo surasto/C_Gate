@@ -19,4 +19,28 @@ void Terror() {
      } 
 }
 
-
+void Lauflicht() {
+     if(millis() > old_millis_D +100){
+      
+       if(wertR < 100) {
+        wertR = 0; 
+        wertG = 255; 
+        wertB = 0;
+       }else
+      
+      if(wertG < 100) {
+        wertR = 0;
+        wertG = 0;
+        wertB = 255;
+       }else
+      
+      if(wertB < 100) {
+        wertR = 255; 
+        wertG = 0;
+        wertB = 0;
+       }else
+      
+      old_millis_D = millis();
+     }
+}
+    

@@ -7,7 +7,7 @@
 /////////////////////////////////////////////
 
 // Globale Variablen 
-int mode = 0;              // Animationsmodus
+int mode = 4;              // Animationsmodus
 int wertR, wertG, wertB;   // Helligkeit des drei LEDs
 long cm;
 
@@ -29,6 +29,11 @@ void loop() {
     case 2: dauerBlau();
             break;
     case 3: Terror();
+            break;
+    case 4: Lauflicht();
+            break;
+    case 5: Zufall();
+            break;
   }
 
   digitalWrite(13,wertR);  // Hier werden die Werte geschrieben
