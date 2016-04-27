@@ -2,7 +2,7 @@
 // Letzte Änerdung am 27-Apr-16
 
 // Felix globale Variablen
-
+unsigned long old_millis_F = 0;
 
 // Felix Funktionen
 
@@ -32,7 +32,8 @@ void dauerWeiss() {
   wertB=255;
 }
 
-void Zufall (){
+void Zufall (){;
+  if(millis() > old_millis_F +1000);
   wertR=random(0,255);
   wertG=random(0,255);
   wertB=random(0,255);
