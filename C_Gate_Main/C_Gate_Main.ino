@@ -30,10 +30,19 @@ void loop() {
             break;
     case 3: Terror();
             break;
-    case 4: Lauflicht(500);
+    case 4: Lauflicht(100);
             break;
-    case 5: Zufall(1000);
+    case 5: Lauflicht(400);
             break;
+    case 6: Lauflicht(800);
+            break;
+    case 7: Lauflicht(1600);
+            break;
+    case 8: Zufall(1000);
+            break;
+    case 9: Zufall(400);
+            break;
+
   }
 
   digitalWrite(13,wertR);  // Hier werden die Werte geschrieben
@@ -44,7 +53,7 @@ void loop() {
   Serial.println(cm);  
 
   if (cm < 50) mode++;
-  if (mode>5) mode=0;
+  if (mode>9) mode=0;
 }
 
 
