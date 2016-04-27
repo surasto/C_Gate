@@ -41,6 +41,15 @@ void loop() {
   digitalWrite(10,wertG);
 
   cm = Abstand();
+  Serial.println(cm);  
 
-  // Serial.println(cm);  
+  if (cm < 50) mode++;
+  if (mode>5) mode=0;
 }
+
+
+  
+
+
+
+
