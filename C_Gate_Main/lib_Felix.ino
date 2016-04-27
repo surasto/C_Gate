@@ -34,9 +34,9 @@ void dauerWeiss() {
 
 void Zufall (){;
   if(millis() > old_millis_F +1000) {
-    wertR=random(0,255);
-    wertG=random(0,255);
-    wertB=random(0,255);
+    wertR=random(0,2)*100;
+    wertG=random(0,2)*100;
+    wertB=random(0,2)*100;
     old_millis_F=millis();
   }
 }
