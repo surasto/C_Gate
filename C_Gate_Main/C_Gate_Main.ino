@@ -42,18 +42,22 @@ void loop() {
             break;
     case 9: Zufall(400);
             break;
+   case 10: wechsel(1,1600);
+            break;
 
   }
 
-  digitalWrite(13,wertR);  // Hier werden die Werte geschrieben
-  digitalWrite(11,wertB);
-  digitalWrite(10,wertG);
+  analogWrite(13,wertR);  // Hier werden die Werte geschrieben
+  analogWrite(11,wertB);
+  analogWrite(10,wertG);
 
   cm = Abstand();
-  Serial.println(cm);  
+  Serial.println(cm); 
+ 
 
   if (cm < 50) mode++;
-  if (mode>9) mode=0;
+  if (mode>10) mode=0;
+
 }
 
 
