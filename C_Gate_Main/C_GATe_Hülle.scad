@@ -1,4 +1,4 @@
-//Hülle
+//Hülle und Deckel
 
 // Haupt Box
 difference(){
