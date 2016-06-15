@@ -6,8 +6,14 @@ unsigned long old_millis_D = 0;
 // Davids Funktionen
 
 
-//_____________Terror____________
+// Wenn millis() kleiner ist, als der letzte gespeicherte Wert, dann muss es einen Überlauf gegeben haben
+void ueberlaufDetect_D() {
+  if (millis() < old_millis_D) {
+    old_millis_D=0;
+  }
+}
 
+//_____________Terror____________
 
 void Terror() {
     if(millis() > old_millis_D +10){

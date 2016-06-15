@@ -8,6 +8,14 @@ int richtung_F = 1;
 
 // Felix Funktionen
 
+// Wenn millis() kleiner ist, als der letzte gespeicherte Wert, dann muss es einen Überlauf gegeben haben
+void ueberlaufDetect_F() {
+  if (millis() < old_millis_F) {
+    old_millis_F=0;
+  }
+}
+
+
 void dauerGruen() {
   
   wertR=0;
@@ -26,6 +34,25 @@ void dauerRot() {
   wertG=0;
   wertB=0;
 }
+
+void dauerBlauRot() {
+  wertR=255;
+  wertG=0;
+  wertB=255;
+}
+
+void dauerBlauGruen() {
+  wertR=0;
+  wertG=255;
+  wertB=255;
+}
+
+void dauerGruenRot() {
+  wertR=255;
+  wertG=255;
+  wertB=0;
+}
+
 
 // Schaltet alle drei LEDs an
 void dauerWeiss() {
@@ -82,7 +109,50 @@ void wechsel(int von, int bis) {
   }
 }
 
+void FadeBlau(int von, int bis) {
+   
+   if(millis() > old_millis_F + 100) {
+       wertG = 0;  
+       wertB = wertB + richtung_F;    //Blau hochfahren
+       wertR = 0;
+       if (wertB >= 255) richtung_F = -1;
+       if (wertB <= 0) {
+         richtung_F = 1;
+       }
+     old_millis_F = millis();
+   }
+}
 
+
+void FadeRot(int von, int bis) {
+   
+   if(millis() > old_millis_F + 100) {
+       wertG = 0;
+       wertB = 0;
+       wertR = wertR + richtung_F*10;   //Rot hochfahren
+       if (wertR >= 255) richtung_F = -1;
+       if (wertR <= 0) {
+         richtung_F = 1;
+       }
+     old_millis_F = millis();
+   }
+}
+
+
+void FadeGruen(int von, int bis) {
+   
+   if(millis() > old_millis_F + 100) {
+       wertG = wertG + richtung_F;   //Grün hochfahren
+       wertB = 0;
+       wertR = 0;
+       if (wertG >= 255) richtung_F = -1;
+       if (wertG <= 0) {
+         richtung_F = 1;
+       }
+
+     old_millis_F = millis();
+   }
+}
 
 
 

@@ -22,8 +22,8 @@ long Abstand() {
   duration = pulseIn(pingPin,HIGH);  // Messung der Verzögerung bis Echo
   cm = duration / 29 / 2 ;
   
-  Serial.print(cm);        // Nur für Debug
-  Serial.println("cm");
+//  Serial.print(cm);        // Nur für Debug
+//  Serial.println("cm");
   delay(50);
   return cm;
 }
